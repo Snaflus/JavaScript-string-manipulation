@@ -18,9 +18,10 @@
         <h1 style="font-weight: bold;">String manipulation</h1>
         <input id="inputField" type="text" v-model="word">
         <button id="showButton" type="button" @click="showWord(word)">Show it</button>
-        <div id="autoR">
-            {{ arrayToResult }}
-        </div>
+
+        <ul>
+            <li v-for="data in words">{{data}}</li>
+        </ul>
 
         <table class="table table-sm table-striped">
             <tbody>
@@ -29,12 +30,7 @@
                     <td>{{data}}</td>
                 </tr>
             </tbody>
-        </table>
-
-        <ul>
-            <li v-for="data in words">{{data}}</li>
-        </ul>
-
+        </table>     
 
         <!-- This is a DOM solution in pure Javascript done before we had any vue.js introduction -->
         <!-- <ul id="orderedResultsList"></ul>
@@ -47,6 +43,10 @@
             <tbody id="orderedResultsTableBody"></tbody>
         </table> -->
 
+        <!-- troubleshoot output -->
+        <div id="autoR">
+            {{ arrayToResult }}
+        </div>
         
     </div>
 
